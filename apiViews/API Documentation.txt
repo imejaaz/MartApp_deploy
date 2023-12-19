@@ -1,0 +1,65 @@
+rute url:   http://127.0.0.1:8000/
+
+<-------------------Categories API endpoints--------------------------->
+
+Allowed Methods: GET, POST
+
+Get all parent categories:  
+	
+	url :  http://127.0.0.1:8000/api/getCategories
+	method : GET
+
+Get all subCategories related to a specific parent Category 
+	
+	url: http://127.0.0.1:8000/api/getCategories
+	method : POST
+	body: {"id":"parentCategory ID"}
+
+
+Get all Products related to a specific subcategory Category 
+Note: all products are connected to subcategories 
+	
+	url: http://127.0.0.1:8000/api/getCategories
+	method : POST
+	body: {"ctg_id":"subCategory ID"}
+
+
+<-------------------Products API endpoints--------------------------->
+
+Allowed Methods: GET, POST
+
+Get (n) number of products:  
+	
+	url :  http://127.0.0.1:8000/api/getProducts
+	method : GET
+
+Get recommended products:  
+	
+	url :  http://127.0.0.1:8000/api/getProducts/?recommended=True
+	method : GET
+
+Get topSell products:  
+	
+	url :  http://127.0.0.1:8000/api/getProducts/?topSell=True
+	method : GET
+
+Get featured products:  
+	
+	url :  http://127.0.0.1:8000/api/getProducts/?featured=True
+	method : GET
+
+Get a specific product details 
+	
+	url: http://127.0.0.1:8000/api/getProducts
+	method : POST
+	body: {"id":"Product ID"}
+
+
+
+
+
+
+
+
+
+
